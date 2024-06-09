@@ -8,42 +8,42 @@ let products =
                 [
                     {
                         id: 1,
-                        productName: "Gemstone",
-                        category: "Ring",
-                        Material: "Gold",
-                        Amount: 1000,
+                        productName: "Dell-Latitude",
+                        category: "Laptop",
+                        description: "Dell Latitude E5450 i3 5th GEN 1 for business. RAM 8GB, HDD 1TB",
+                        amount: 20000.89,
                         img_url: "https://leahbasson.github.io/MyImages/jsProject/circle1.jpg"
                     },
                     {
                         id: 2,
-                        productName : "Chunky Silver",
-                        category: "Bracelet",
-                        Material: "Silver",
-                        Amount: 300,
-                        img_url: "https://leahbasson.github.io/MyImages/jsProject/circle2.png"
+                        productName: "Todo App",
+                        category: "Application",
+                        description: "Allow you to create, edit, delete, task including sorting tasks by ascending",
+                        amount: 30000.89,
+                        img_url: "https://codjoelmayer.github.io/allImages/images/todoapp.png"
                     },
                     {
                         id: 3,
-                        productName: "Chain Necklace",
-                        category: "Necklace",
-                        Material: "Gold",
-                        Amount: 600,
-                        img_url: "https://leahbasson.github.io/MyImages/jsProject/circle3.jpg"
+                        productName: "Python Programming",
+                        category: "Book",
+                        description: "Python Programming for Beginners",
+                        amount: 990.99,
+                        img_url: "https://i.postimg.cc/rFcbKX5p/Python-Programming-for-Beginners-cover.jpg"
                     },
                     {
                         id: 4,
-                        productName: "Pear Shaped Pearls",
-                        category: "Earrings",
-                        Material: "Pearls, Gold",
-                        Amount: 300,
-                        img_url: "https://leahbasson.github.io/MyImages/jsProject/circle4.jpg"
+                        productName: "C++",
+                        category: "Book",
+                        description: "Mastering C++ Programming",
+                        amount: 1000,
+                        img_url: "https://i.postimg.cc/Ss9zrpfT/Mastering-C-Programming.jpg"
                     },
                     {
                         id: 5,
-                        productName: "Heart Shaped Earrings",
-                        category: "Earrings",
-                        Material: "Gold, Diamond",
-                        Amount: 500,
+                        productName: "HP Elite",
+                        category: "Laptop",
+                        description: "HP Elite Book Intel Core i5 1135G7 SSD 256GB  RAM 8GB",
+                        amount: 15000,
                         img_url: "https://leahbasson.github.io/MyImages/jsProject/homeLimited.jpg"
                     }
                 ]
@@ -59,10 +59,10 @@ function recentProducts() {
         latestProducts.forEach(product => {
             wrapper.innerHTML += `
         <div class="card">
-            <img src="${[product.img_url]}" class="card-img-top" alt="${product.productName}">
+            <img src="${product.img_url}" class="card-img-top" alt="${product.productName}" loading='lazy'>
             <div class="card-body">
                 <h5 class="card-title">${product.productName}</h5>
-                <p class="card-text">${product.Material}</p>
+                <p class="card-text">${product.description}</p>
             </div>
         </div>
     `
